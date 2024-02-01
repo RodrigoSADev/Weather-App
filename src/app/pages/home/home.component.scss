@@ -1,0 +1,38 @@
+@import "./../../../styles/variables.scss";
+
+.title {
+  color: $white;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.main-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.main-container input {
+  background-color: $shadow-dark;
+  outline: none;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  color: $white;
+  font-size: 0.8rem;
+  text-align: center;
+  width: 70%;
+}
+
+.search-icon {
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: $gray;
+  }
+}
+
+button {
+  border: none;
+  background: transparent;
+}

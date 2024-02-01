@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+body {
+  font-family: $primary-font;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-blue;
+  @include flex-container;
+}
+
+fa-icon {
+  color: $white;
+}

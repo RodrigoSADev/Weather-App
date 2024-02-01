@@ -1,0 +1,17 @@
+<main class="main-container">
+  <h1 class="title">Dados Climáticos</h1>
+  <form #form>
+    <input
+      type="text"
+      placeholder="Buscar Localização"
+      name="city"
+      [(ngModel)]="initialCityName"
+    />
+    <button (click)="onSubmit()">
+      <fa-icon size="lg" class="search-icon" [icon]="searchIcon"></fa-icon>
+    </button>
+  </form>
+  @if (weatherResponse) {
+  <app-card [weatherData]="weatherResponse" />
+  }
+</main>

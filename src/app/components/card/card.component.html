@@ -1,0 +1,56 @@
+@if (weatherData) {
+<section class="container">
+  <div class="upper-data">
+    @if (weatherData.main.temp > 15) {
+    <img src="assets/hot.jpg" alt="" />
+    } @else {
+    <img src="assets/cold.jpg" alt="" />
+    }
+    <div class="weather-data">
+      <p class="location">
+        {{ weatherData.name }}, {{ weatherData.sys.country }}
+      </p>
+      <div class="temperature">
+        {{ weatherData.main.temp | number : "1.0-0" }}°C
+      </div>
+    </div>
+  </div>
+  <div class="lower-data">
+    <div class="more-info-label">Mais Informações</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTempIcon"></fa-icon>
+          <span>Mínima</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData.main.temp_min | number : "1.0-0" }}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTempIcon"></fa-icon>
+          <span>Máxima</span>
+        </div>
+        <div class="info-block-value">
+          {{ weatherData.main.temp_max | number : "1.0-0" }}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidityIcon"></fa-icon>
+          <span>Humidade</span>
+        </div>
+        <div class="info-block-value">{{ weatherData.main.humidity }}%</div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>Vento</span>
+        </div>
+        <div class="info-block-value">{{ weatherData.wind.speed }} km/h</div>
+      </div>
+    </div>
+  </div>
+</section>
+}

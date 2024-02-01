@@ -1,0 +1,20 @@
+// Colors
+$primary-blue: #3c429e;
+$secondary-blue: #4c52ad;
+$yellow: #fac742;
+$white: #fff;
+$gray: #ededed;
+
+// Box Shadow
+$shadow-dark: rgba(0, 0, 0, 0.3);
+$shadow-light: rgba(255, 255, 255, 0.1);
+
+// Fonts
+$primary-font: Verdana, Geneva, Tahoma, sans-serif;
+
+// Mixins
+@mixin flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
